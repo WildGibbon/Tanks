@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Runner.Model.Health
+namespace Tanks.Model.Health
 {
 	public class Health : IHealth
 	{

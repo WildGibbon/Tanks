@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Tanks.Model.Gun.DefaultBullet" Collapsed="true">
+    <Position X="17.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAIAAAAAAAaAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\Model\Gun\Bullets\DefaultBullet.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_view" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Tanks.View.Gun.BulletTransformView" Collapsed="true">
+    <Position X="17.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAEAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\View\Gun\Bullets\BulletTransformView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_bullet" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Tanks.Model.Health.Health" Collapsed="true">
+    <Position X="14.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAACAAAAAEAAAAAAAAAAAAAAggAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\Model\Health\Health.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Tanks.View.Health.HealthTransformView" Collapsed="true">
+    <Position X="14.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\View\Health\HealthTransformView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Health" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Tanks.Factories.BulletFactory" Collapsed="true">
+    <Position X="17.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAACAAIAAMAAAAAAAAAAAQA=</HashCode>
+      <FileName>Assets\Source\Runtime\Factories\BulletFactory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_spawningBullet" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Tanks.View.Gun.BulletView" Collapsed="true">
+    <Position X="17.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAEA=</HashCode>
+      <FileName>Assets\Source\Runtime\View\Gun\Bullets\BulletView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Tanks.Model.Gun.DefaultGun" Collapsed="true">
+    <Position X="24.75" Y="10.75" Width="1.5" />
+    <AssociationLine Name="_magazine" Type="Tanks.Model.Gun.IBulletMagazine" ManuallyRouted="true">
+      <Path>
+        <Point X="24.75" Y="11.031" />
+        <Point X="23.872" Y="11.031" />
+        <Point X="23.872" Y="10" />
+        <Point X="22.75" Y="10" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAIBAAAAABAAAACAAAAAAAACACCAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\Model\Gun\DefaultGun.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_magazine" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Tanks.Model.Gun.Magazine.BulletMagazine" Collapsed="true">
+    <Position X="21.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAACAAAACBCBAAAAEA=</HashCode>
+      <FileName>Assets\Source\Runtime\Model\Gun\Magazine\BulletMagazine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_factory" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Tanks.Model.Gun.IBullet" Collapsed="true">
+    <Position X="17.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\Model\Gun\Bullets\IBullet.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Tanks.View.Gun.IBulletView" Collapsed="true">
+    <Position X="17.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\View\Gun\Bullets\IBulletView.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Tanks.Model.Health.IHealth" Collapsed="true">
+    <Position X="14.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAACAAAAAEAAAAAAAAAAAAAAggAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\Model\Health\IHealth.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Tanks.View.Health.IHealthTransformView" Collapsed="true">
+    <Position X="14.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\View\Health\IHealthTransformView.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Tanks.Model.Gun.IGun" Collapsed="true">
+    <Position X="24.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAABAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\Model\Gun\IGun.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Tanks.Model.Gun.IBulletMagazine" Collapsed="true">
+    <Position X="21.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAABAAAAEA=</HashCode>
+      <FileName>Assets\Source\Runtime\Model\Gun\Magazine\IBulletMagazine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Tanks.Factories.IFactory&lt;T&gt;" Collapsed="true">
+    <Position X="17.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\Factories\IFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,4 +1,4 @@
-﻿namespace Runner.Model.Health
+﻿namespace Tanks.Model.Health
 {
 	public interface IHealth
 	{
