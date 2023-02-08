@@ -64,13 +64,13 @@
     <AssociationLine Name="_magazine" Type="Tanks.Model.Gun.IBulletMagazine" ManuallyRouted="true">
       <Path>
         <Point X="24.75" Y="11.031" />
-        <Point X="23.872" Y="11.031" />
-        <Point X="23.872" Y="10" />
+        <Point X="23.875" Y="11.031" />
+        <Point X="23.875" Y="10" />
         <Point X="22.75" Y="10" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAABAAIBAAAAABAAAACAAAAAAAACACCAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAABAAABAAAAABAAAACAAAAAAAACACCAAAAAAA=</HashCode>
       <FileName>Assets\Source\Runtime\Model\Gun\DefaultGun.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -80,6 +80,14 @@
   </Class>
   <Class Name="Tanks.Model.Gun.Magazine.BulletMagazine" Collapsed="true">
     <Position X="21.25" Y="10.75" Width="1.5" />
+    <AssociationLine Name="_factory" Type="Tanks.Factories.IFactory&lt;T&gt;" ManuallyRouted="true">
+      <Path>
+        <Point X="21.25" Y="11.031" />
+        <Point X="20.314" Y="11.031" />
+        <Point X="20.314" Y="4.031" />
+        <Point X="19.25" Y="4.031" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAACAAAACBCBAAAAEA=</HashCode>
       <FileName>Assets\Source\Runtime\Model\Gun\Magazine\BulletMagazine.cs</FileName>
@@ -87,6 +95,71 @@
     <ShowAsAssociation>
       <Field Name="_factory" />
     </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Tanks.Model.Player.Player" Collapsed="true">
+    <Position X="34" Y="7.75" Width="1.5" />
+    <AssociationLine Name="_movementInput" Type="Tanks.Model.Input.IMovementInput" ManuallyRouted="true">
+      <Path>
+        <Point X="34.75" Y="8.312" />
+        <Point X="34.75" Y="8.911" />
+        <Point X="32.75" Y="8.911" />
+        <Point X="32.75" Y="9.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_rotation" Type="Tanks.Model.Movement.IRotation" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="34.75" Y="8.312" />
+        <Point X="34.75" Y="8.911" />
+        <Point X="36.75" Y="8.911" />
+        <Point X="36.75" Y="9.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\Model\Player\Player.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_movementInput" />
+      <Field Name="_rotation" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Tanks.UI.Buttons.ShootButton" Collapsed="true">
+    <Position X="28.5" Y="10.75" Width="1.5" />
+    <AssociationLine Name="_gun" Type="Tanks.Model.Gun.IGun" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="28.5" Y="11" />
+        <Point X="27.422" Y="11" />
+        <Point X="27.422" Y="10.031" />
+        <Point X="26.25" Y="10.031" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAQAAAQAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\Model\UI\Buttons\ShootButton.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_gun" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Tanks.UI.UnityButton" Collapsed="true">
+    <Position X="28.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAIAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\Model\UI\UnityButton.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_button" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Tanks.Model.Input.MovementInput" Collapsed="true">
+    <Position X="32" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAEAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\Model\Input\MovementInput.cs</FileName>
+    </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Interface Name="Tanks.Model.Gun.IBullet" Collapsed="true">
@@ -136,6 +209,27 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Source\Runtime\Factories\IFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Tanks.UI.IButton" Collapsed="true">
+    <Position X="28.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\Model\UI\IButton.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Tanks.Model.Input.IMovementInput" Collapsed="true">
+    <Position X="32" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\Model\Input\IMovementInput.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Tanks.Model.Movement.IRotation" Collapsed="true">
+    <Position X="36" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\Model\Movement\Rotation\IRotation.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

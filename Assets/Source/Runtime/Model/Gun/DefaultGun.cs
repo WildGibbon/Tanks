@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 namespace Tanks.Model.Gun
 {
-	public class DefaultGun : IGun, IPointerDownHandler
+	public class DefaultGun : IGun
 	{
 		private readonly IBulletMagazine _magazine;
 		private readonly float _shootDelay;
@@ -38,11 +38,12 @@ namespace Tanks.Model.Gun
 			}
 
 			if (!_magazine.CanTakeBullet())
-				CanShoot = false;
+				Reload();
 		}
 
 		public async void Reload()
 		{
+			CanShoot = false;
 			await UniTask.Delay(TimeSpan.FromSeconds(_reloadDelay));
 			_magazine.Fill();
 			CanShoot = true;
@@ -53,11 +54,6 @@ namespace Tanks.Model.Gun
 			CanShoot = false;
 			await UniTask.Delay(TimeSpan.FromSeconds(_shootDelay));
 			CanShoot = true;		
-		}
-
-		public void OnPointerDown(PointerEventData eventData)
-		{
-			
 		}
 	}
 }
