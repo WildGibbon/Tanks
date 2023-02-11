@@ -10,16 +10,11 @@ namespace Tanks.View.Gun
 	[RequireComponent(typeof(Rigidbody2D))]
 	public class BulletView : MonoBehaviour, IBulletView
 	{
-		private Rigidbody2D _rigidbody;
+		[SerializeField] private Rigidbody2D _rigidbody;
 
-		private void Awake()
+		public void Visualize(Vector2 velocity, Quaternion rotation)
 		{
-			_rigidbody = GetComponent<Rigidbody2D>();
-		}
-
-		public void Visualize(Vector2 direction, Quaternion rotation)
-		{
-			_rigidbody.AddForce(direction);
+			_rigidbody.AddForce(velocity);
 			gameObject.transform.rotation = rotation;
 		}
 	}

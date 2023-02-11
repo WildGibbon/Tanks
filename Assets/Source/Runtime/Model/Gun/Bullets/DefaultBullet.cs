@@ -30,8 +30,8 @@ namespace Tanks.Model.Gun
 
 		public void Throw(Vector2 direction)
 		{
-			var rotation = Quaternion.LookRotation(Vector2.up, direction);
-			_view.Visualize(direction.normalized * _throwForce, rotation);
+			var rotation = Quaternion.LookRotation(Vector3.forward, direction);
+			_view.Visualize(direction * _throwForce, rotation);
 		}
 
 		public void Attack(IHealth health)

@@ -1,9 +1,10 @@
 ﻿using System;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace Tanks.Model.UI
 {
-	internal class HoldUIElement : IHoldUIElement, IPointerDownHandler, IPointerUpHandler
+	internal class HoldUIElement : MonoBehaviour, IHoldUIElement, IPointerDownHandler, IPointerUpHandler
 	{
 		public bool IsHold { get; private set; }
 

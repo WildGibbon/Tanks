@@ -1,4 +1,5 @@
 ﻿using System;
+using Tanks.View.Movement;
 using UnityEngine;
 
 namespace Tanks.Model.Movement
@@ -6,29 +7,25 @@ namespace Tanks.Model.Movement
 	public class Rotation : IRotation
 	{
 		private readonly float _speed;
+		private readonly IRotationView _view;
 
-		private Quaternion _currentValue;
-		private RotationMode _mode;
+		public Quaternion CurrentRotation { get; private set; }
 
-		public Rotation(float speed, Quaternion value)
+		public Rotation(IRotationView view, float speed, Quaternion rotation)
 		{
 			if(speed <= 0) 
 				throw new ArgumentOutOfRangeException(nameof(speed));
 
-			_mode = RotationMode.None;
-			_currentValue = value;
+			_view = view ?? throw new ArgumentNullException(nameof(view));
+			CurrentRotation = rotation;
 			_speed = speed;
 		}
 
-		public void SetRotationMode(RotationMode mode)
+		public void RotateTo(RotationDirection direction, float deltaTime)
 		{
-			_mode = mode;
-		}
-
-		public void Update(float deltaTime)
-		{
-			var nextRotationZ = _currentValue.z + _speed * ((int)_mode) * deltaTime;
-			_currentValue = Quaternion.Euler(0, 0, nextRotationZ);
+			var nextRotationZ = CurrentRotation.eulerAngles.z + (int)direction * _speed * deltaTime;
+			CurrentRotation = Quaternion.Euler(CurrentRotation.x, CurrentRotation.y, nextRotationZ);
+			_view.Visualize(CurrentRotation);
 		}
 	}
 }

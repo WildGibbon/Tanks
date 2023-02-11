@@ -21,8 +21,13 @@ namespace Tanks.UI.Buttons
 
 		public void Press()
 		{
-			var shootDirection = _shootingPoint.position + _shootingPoint.forward;
-			_gun.Shoot(shootDirection);
+			var shootDirection = _shootingPoint.right;
+
+			Debug.Log(shootDirection);
+			Debug.Log(_shootingPoint.right);
+
+			if (_gun.CanShoot)
+				_gun.Shoot(shootDirection);
 		}
 	}
 }

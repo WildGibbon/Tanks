@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Tanks.Model.Movement
 {
-	public interface IDirectionalMovement : IUpdatable
+	public interface IDirectionalMovement
 	{
 		void Move(Vector2 direction);
 	}

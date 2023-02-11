@@ -1,36 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Tanks.View.Movement;
 using UnityEngine;
 
 namespace Tanks.Model.Movement
 {
 	public class DirectionalMovement : IDirectionalMovement
 	{
+		private readonly IMovementView _view;
 		private readonly float _speed;
 
-		private Vector2 _position;
-		private Vector2 _direction;
-
-		public DirectionalMovement(float speed, Vector2 position)
+		public DirectionalMovement(IMovementView view, float speed)
 		{
 			if(speed <= 0)
 				throw new ArgumentOutOfRangeException(nameof(speed));
 
-			_position = position;
 			_speed = speed;
+			_view = view;
 		}
 
 		public void Move(Vector2 direction)
 		{
-			_direction = direction.normalized;
-		}
-
-		public void Update(float deltaTime)
-		{
-			_position += _direction * _speed * deltaTime;
+			_view.Visualize(direction * _speed);
 		}
 	}
 }

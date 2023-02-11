@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tanks.Model.Movement;
 
-namespace Tanks.Model.Movement
+namespace Tanks.Factories
 {
-	public enum RotationMode : int
+	public interface IRotationFactory
 	{
-		Right = 1,
-		None = 0,
-		Left = -1
+		IRotation Create();
 	}
 }

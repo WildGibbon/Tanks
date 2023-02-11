@@ -1,15 +1,15 @@
 ﻿using System;
-using Tanks.Model.Gun;
 using Tanks.Model.Input;
 using Tanks.Model.Movement;
 using Tanks.Tools.SystemUpdates;
+using UnityEngine;
 
 namespace Tanks.Model.Player
 {
 	public class Player : IUpdatable
 	{
-		private readonly IMovementInput _movementInput;
 		private readonly IDirectionalMovement _movement;
+		private readonly IMovementInput _movementInput;
 		private readonly IRotation _rotation;
 
 		public Player(IMovementInput movementInput, IDirectionalMovement movement, IRotation rotation)
@@ -22,14 +22,22 @@ namespace Tanks.Model.Player
 		public void Update(float deltaTime)
 		{
 			if (_movementInput.IsLeftButtonHold)
-				_rotation.SetRotationMode(RotationMode.Left);     
+				_rotation.RotateTo(RotationDirection.Left, deltaTime); 
 
 			if (_movementInput.IsRightButtonHold)
-				_rotation.SetRotationMode(RotationMode.Right);
+				_rotation.RotateTo(RotationDirection.Right, deltaTime);
 
 			if(_movementInput.IsLeftButtonHold && _movementInput.IsRightButtonHold)
 			{
+				var directionX = Mathf.Cos(_rotation.CurrentRotation.eulerAngles.z * Mathf.Deg2Rad);
+				var directionY = Mathf.Sin(_rotation.CurrentRotation.eulerAngles.z * Mathf.Deg2Rad);
+				var direction = new Vector2(directionX, directionY);
 
+				_movement.Move(direction);
+			}
+			else
+			{
+				_movement.Move(Vector2.zero);
 			}
 		}
 	}

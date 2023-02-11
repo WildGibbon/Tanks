@@ -10,13 +10,13 @@ namespace Tanks.Model.Gun.Magazine
 {
 	public class BulletMagazine : IBulletMagazine
 	{
-		private readonly IFactory<IBullet> _factory;
+		private readonly IBulletFactory _factory;
 		private readonly int _capacity;
-		private readonly ITextView _view;
+		private readonly IBulletMagazineView _view;
 
 		private int _currentBulletsCount;
 
-		public BulletMagazine(ITextView view, IFactory<IBullet> factory, int capacity)
+		public BulletMagazine(IBulletMagazineView view, IBulletFactory factory, int capacity)
 		{
 			if(capacity <= 0)
 				throw new ArgumentOutOfRangeException(nameof(capacity));
@@ -32,6 +32,7 @@ namespace Tanks.Model.Gun.Magazine
 				throw new InvalidOperationException();
 
 			_currentBulletsCount--;
+			_view.Visualize(_currentBulletsCount, _capacity);
 
 			return _factory.Create();
 		}
@@ -44,6 +45,7 @@ namespace Tanks.Model.Gun.Magazine
 		public void Fill()
 		{
 			_currentBulletsCount = _capacity;
+			_view.Visualize(_currentBulletsCount, _capacity);
 		}
 	}
 }

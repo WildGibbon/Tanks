@@ -14,12 +14,13 @@ namespace Tanks.View.Gun
 			_bullet = bullet ?? throw new ArgumentNullException(nameof(bullet));
 		}
 
-		private void OnTriggerEnter2D(Collider2D collision)
+		private void OnCollisionEnter2D(Collision2D collision)
 		{
-			if(collision.TryGetComponent<IHealthTransformView>(out var healthTransformView))
+			if(collision.transform.TryGetComponent<IHealthTransformView>(out var healthTransformView))
 			{
 				_bullet.Attack(healthTransformView.Health);
 			}
+			Destroy(gameObject);
 		}
 	}
 }

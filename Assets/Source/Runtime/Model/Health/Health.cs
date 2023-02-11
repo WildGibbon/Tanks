@@ -1,4 +1,5 @@
 ﻿using System;
+using Tanks.View.Health;
 using UnityEngine;
 
 namespace Tanks.Model.Health
@@ -9,13 +10,16 @@ namespace Tanks.Model.Health
 		public int MaxValue { get; private set; }
 		public bool IsDead => Value <= 0;
 
-		public Health(int value, int maxValue)
+		private readonly IHealthView _viev;
+
+		public Health(IHealthView view, int value)
 		{
 			if (value <= 0)
 				throw new ArgumentOutOfRangeException("Health value can not be less than 0");
 
-			MaxValue = maxValue;
-			Value = maxValue;
+			_viev = view ?? throw new ArgumentNullException(nameof(view));
+			Value = MaxValue = value;
+			_viev.Visualize(Value, MaxValue);
 		}
 
 		public void TakeDamage(int value)
@@ -27,7 +31,7 @@ namespace Tanks.Model.Health
 				throw new ArgumentOutOfRangeException("Damage can not be less than 0");
 
 			Value -= value;
-			Debug.Log("Damaged");
+			_viev.Visualize(Value, MaxValue);
 		}
 
 		public void Heal(int count)
@@ -45,7 +49,7 @@ namespace Tanks.Model.Health
 			}
 
 			Value += count;
-			Debug.Log("Heal");
+			_viev.Visualize(Value, MaxValue);
 		}
 
 		public bool CanHeal(int count)

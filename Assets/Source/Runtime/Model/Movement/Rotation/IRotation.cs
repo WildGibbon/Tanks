@@ -1,9 +1,11 @@
 ﻿using Tanks.Tools.SystemUpdates;
+using UnityEngine;
 
 namespace Tanks.Model.Movement
 {
-	public interface IRotation : IUpdatable
+	public interface IRotation
 	{
-		void SetRotationMode(RotationMode mode);
+		Quaternion CurrentRotation { get; }
+		void RotateTo(RotationDirection direction, float deltaTime);
 	}
 }

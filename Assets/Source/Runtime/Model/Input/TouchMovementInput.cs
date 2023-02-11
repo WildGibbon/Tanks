@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Tanks.Model.Input
 {
-	public class MovementInput : SerializedMonoBehaviour, IMovementInput
+	public class TouchMovementInput : SerializedMonoBehaviour, IMovementInput
 	{
 		[SerializeField] private IHoldUIElement _leftButton;
 		[SerializeField] private IHoldUIElement _rightButton;
