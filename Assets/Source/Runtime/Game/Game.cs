@@ -8,19 +8,18 @@ namespace Tanks.Game
 {
 	public class Game : IGame
 	{
-		private readonly List<IPlayerFactory> _playerFactories;
 		private readonly ISystemUpdate _systemUpdate;
+		private readonly IGameData _data;
 
-		public Game(List<IPlayerFactory> playerFactories)
+		public Game(IGameData GameData)
 		{
-			_playerFactories = playerFactories ?? throw new ArgumentNullException(nameof(playerFactories));
+			_data = GameData ?? throw new ArgumentNullException(nameof(GameData));
 			_systemUpdate = new SystemUpdate();
 		}
 
 		public void Play()
 		{
-			foreach(var playerFactory in _playerFactories)
-				_systemUpdate.Add(playerFactory.Create());
+			_systemUpdate.Add(_data.PlayerFactory.Create());
 		}
 
 		public void Update(float deltaTime)
