@@ -22,7 +22,7 @@ namespace Tanks.Factories.Gun
 		public IGun Create()
 		{
 			_magazine = new BulletMagazine(_magazineView, _bulletFactory, _magazineCapacity);
-			_gun = new DefaultGun(_gunView, _magazine, _reloadDelay, _shootDelay);
+			_gun = new Model.Gun.Gun(_gunView, _magazine, _reloadDelay, _shootDelay);
 
 			return _gun;
 		}

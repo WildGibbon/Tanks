@@ -3,11 +3,13 @@ using UnityEngine;
 using Cysharp.Threading.Tasks;
 using UnityEngine.EventSystems;
 using Tanks.View.Gun;
+using Tanks.Factories;
 
 namespace Tanks.Model.Gun
 {
-	public class DefaultGun : IGun
+	public class Gun : IGun
 	{
+		private readonly IBulletFactory _bulletFactory;
 		private readonly IBulletMagazine _magazine;
 		private readonly IGunView _view;
 		private readonly float _shootDelay;
@@ -15,7 +17,7 @@ namespace Tanks.Model.Gun
 		
 		public bool CanShoot { get; private set; }
 
-		public DefaultGun(IGunView view, IBulletMagazine magazine, float reloadDelay, float shootDelay)
+		public Gun(IGunView view, IBulletMagazine magazine, float reloadDelay, float shootDelay)
 		{
 			if(shootDelay < 0)
 				throw new ArgumentOutOfRangeException(nameof(shootDelay));
@@ -37,8 +39,10 @@ namespace Tanks.Model.Gun
 
 			if (_magazine.CanTakeBullet())
 			{
-				_magazine.TakeBullet().Throw(direction);
+				_bulletFactory.Create().Throw(direction);
+				_magazine.TakeBullet();
 				_view.Visualize();
+
 				StartRollback();
 			}
 			if(!_magazine.CanTakeBullet())

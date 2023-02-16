@@ -10,7 +10,6 @@ namespace Tanks.Model.Gun.Magazine
 {
 	public class BulletMagazine : IBulletMagazine
 	{
-		private readonly IBulletFactory _factory;
 		private readonly int _capacity;
 		private readonly IBulletMagazineView _view;
 
@@ -21,20 +20,17 @@ namespace Tanks.Model.Gun.Magazine
 			if(capacity <= 0)
 				throw new ArgumentOutOfRangeException(nameof(capacity));
 
-			_factory = factory ?? throw new ArgumentNullException(nameof(factory));
 			_view = view ?? throw new ArgumentNullException(nameof(view));
 			_capacity = _currentBulletsCount = capacity;
 		}
 
-		public IBullet TakeBullet()
+		public void TakeBullet()
 		{
 			if(!CanTakeBullet())
 				throw new InvalidOperationException();
 
 			_currentBulletsCount--;
 			_view.Visualize(_currentBulletsCount, _capacity);
-
-			return _factory.Create();
 		}
 
 		public bool CanTakeBullet()

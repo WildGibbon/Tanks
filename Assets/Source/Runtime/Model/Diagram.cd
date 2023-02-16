@@ -46,12 +46,9 @@
   <Class Name="Tanks.Factories.BulletFactory" Collapsed="true">
     <Position X="7.5" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAIAABMAAAAAAAAABAQA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAABMAAAAAAAAAAAQA=</HashCode>
       <FileName>Assets\Source\Runtime\Factories\Gun\BulletFactory.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="_bulletTransformView" />
-    </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Tanks.View.Gun.BulletView" Collapsed="true">
@@ -73,7 +70,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAABAAABAAAAABAAAACAAAAAAAACACCAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAABAAABAAAAABAAAACAAAAAAAACCCCAAAAAAA=</HashCode>
       <FileName>Assets\Source\Runtime\Model\Gun\DefaultGun.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -83,20 +80,11 @@
   </Class>
   <Class Name="Tanks.Model.Gun.Magazine.BulletMagazine" Collapsed="true">
     <Position X="11" Y="16.25" Width="1.5" />
-    <AssociationLine Name="_factory" Type="Tanks.Factories.IBulletFactory" ManuallyRouted="true">
-      <Path>
-        <Point X="11" Y="16.531" />
-        <Point X="10.09" Y="16.531" />
-        <Point X="10.09" Y="9.531" />
-        <Point X="9" Y="9.531" />
-      </Path>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAACAAAACBCBAAAAEA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAACAAAACBABAAAAEA=</HashCode>
       <FileName>Assets\Source\Runtime\Model\Gun\Magazine\BulletMagazine.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="_factory" />
       <Field Name="_view" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" />
@@ -210,7 +198,7 @@
   <Class Name="Tanks.Factories.Gun.GunFactory" Collapsed="true">
     <Position X="14.5" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAAAAAAAAAAAAAACBAAAAEAAAACCQAAACAA=</HashCode>
+      <HashCode>AQAAACAAAAAAAAAAAAAAAAACBAAAAEAAAACCQAAACAA=</HashCode>
       <FileName>Assets\Source\Runtime\Factories\Gun\GunFactory.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -350,7 +338,7 @@
     <Position X="11" Y="19" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAEAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Source\Runtime\View\Gun\TextBulletMagazineView.cs</FileName>
+      <FileName>Assets\Source\Runtime\View\Gun\Magazine\TextBulletMagazineView.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -365,7 +353,7 @@
   <Class Name="Tanks.Game.Game" Collapsed="true">
     <Position X="28.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAIgAAIAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAABAAAAAAAAAAAAAAAAAAAAAAAgAAIAAAAAAA=</HashCode>
       <FileName>Assets\Source\Runtime\Game\Game.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -373,7 +361,7 @@
   <Class Name="Tanks.EntryPoint.EntryPoint" Collapsed="true">
     <Position X="28.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAEQ=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAQAAEA=</HashCode>
       <FileName>Assets\Source\Runtime\EntryPoint\EntryPoint.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -521,7 +509,7 @@
     <Position X="11" Y="18" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Source\Runtime\View\Gun\IBulletMagazineView.cs</FileName>
+      <FileName>Assets\Source\Runtime\View\Gun\Magazine\IBulletMagazineView.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Tanks.View.Health.IHealthView" Collapsed="true">
