@@ -9,27 +9,17 @@ namespace Tanks.Model.Gun
 {
 	public class Gun : IGun
 	{
+		public bool CanShoot => _magazine.CanTakeBullet();
+
 		private readonly IBulletFactory _bulletFactory;
 		private readonly IBulletMagazine _magazine;
 		private readonly IGunView _view;
-		private readonly float _shootDelay;
-		private readonly float _reloadDelay;
-		
-		public bool CanShoot { get; private set; }
 
-		public Gun(IGunView view, IBulletMagazine magazine, float reloadDelay, float shootDelay)
+		public Gun(IGunView view, IBulletMagazine magazine, IBulletFactory bulletFactory)
 		{
-			if(shootDelay < 0)
-				throw new ArgumentOutOfRangeException(nameof(shootDelay));
-			if(reloadDelay < 0) 
-				throw new ArgumentOutOfRangeException(nameof(reloadDelay));
-
+			_bulletFactory = bulletFactory ?? throw new ArgumentNullException(nameof(bulletFactory));
 			_magazine = magazine ?? throw new ArgumentNullException(nameof(magazine));
-			_view = view ?? throw new ArgumentNullException(nameof(view)); 
-			_reloadDelay = reloadDelay;
-			_shootDelay = shootDelay;
-
-			CanShoot = true;
+			_view = view ?? throw new ArgumentNullException(nameof(view));
 		}
 
 		public void Shoot(Vector2 direction)
@@ -39,31 +29,15 @@ namespace Tanks.Model.Gun
 
 			if (_magazine.CanTakeBullet())
 			{
-				_bulletFactory.Create().Throw(direction);
 				_magazine.TakeBullet();
+				_bulletFactory.Create().Throw(direction);
 				_view.Visualize();
-
-				StartRollback();
-			}
-			if(!_magazine.CanTakeBullet())
-			{
-				Reload();
 			}
 		}
 
-		public async void Reload()
+		public void Reload()
 		{
-			CanShoot = false;
-			await UniTask.Delay(TimeSpan.FromSeconds(_reloadDelay));
 			_magazine.Fill();
-			CanShoot = true;
-		}
-		
-		private async void StartRollback()
-		{
-			CanShoot = false;
-			await UniTask.Delay(TimeSpan.FromSeconds(_shootDelay));
-			CanShoot = true;		
 		}
 	}
 }
