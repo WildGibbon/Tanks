@@ -14,9 +14,7 @@ namespace Tanks.Factories.Gun
 
 		public IGun Create()
 		{
-			var gunWithReload = new GunWithReloadDelay(_reloadDelay, _gunFactory.Create());
-
-			return gunWithReload;
+			return new GunWithReloadDelay(_reloadDelay, _gunFactory.Create());;
 		}
 	}
 }

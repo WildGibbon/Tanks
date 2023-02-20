@@ -505,7 +505,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3093656236933292760, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
   m_PrefabInstance: {fileID: 8914446772715888599}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1644737947}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 51df7447b7d0c894f9be63e635020c38, type: 3}
@@ -578,16 +578,12 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 1647263824}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: _gunFactory
-      Entry: 10
-      Data: 0
+    SerializationNodes: []
   _shootPoint: {fileID: 1977357989}
   _shootButton: {fileID: 1742534106}
 --- !u!114 &204840340
@@ -650,7 +646,6 @@ MonoBehaviour:
     ReferencedUnityObjects:
     - {fileID: 204840337}
     - {fileID: 204840338}
-    - {fileID: 204840339}
     - {fileID: 204840341}
     - {fileID: 914496423}
     SerializedBytesString: 
@@ -661,18 +656,21 @@ MonoBehaviour:
     - Name: _directionalMovementFactory
       Entry: 10
       Data: 0
+    - Name: _shootButtonFactory
+      Entry: 6
+      Data: 
     - Name: _rotationFactory
       Entry: 10
       Data: 1
-    - Name: _shootButtonFactory
-      Entry: 10
-      Data: 2
     - Name: _healthFactory
       Entry: 10
-      Data: 3
+      Data: 2
+    - Name: _gunFactory
+      Entry: 6
+      Data: 
     - Name: _input
       Entry: 10
-      Data: 4
+      Data: 3
 --- !u!50 &204840343
 Rigidbody2D:
   serializedVersion: 4
@@ -2208,7 +2206,6 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 1631110061}
-    - {fileID: 204840342}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -2220,13 +2217,10 @@ MonoBehaviour:
         Runtime]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 10
       Data: 0
-    - Name: 
-      Entry: 10
-      Data: 1
     - Name: 
       Entry: 13
       Data: 
@@ -3302,7 +3296,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8914446771122560122, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
   m_PrefabInstance: {fileID: 8914446772715888599}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1644737947}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97d378f319272fb4a87cb7a048281f81, type: 3}
@@ -3313,7 +3307,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8914446771122560120, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
   m_PrefabInstance: {fileID: 8914446772715888599}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1644737947}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65ea66a70a0ea8f41bacedfd4ac1c300, type: 3}
@@ -3324,7 +3318,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8914446771122560103, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
   m_PrefabInstance: {fileID: 8914446772715888599}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1644737947}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98f3df0b4aa4ed948a6c1b8526e7a5c2, type: 3}
@@ -3335,7 +3329,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8914446771122560101, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
   m_PrefabInstance: {fileID: 8914446772715888599}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1644737947}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f511f9b0c7dad444a2f4d7dbb9eff48, type: 3}
@@ -3346,7 +3340,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8914446771122560100, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
   m_PrefabInstance: {fileID: 8914446772715888599}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1644737947}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bef1a21734b955141b49b7c791a06e70, type: 3}
@@ -3357,12 +3351,62 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8914446771122560099, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
   m_PrefabInstance: {fileID: 8914446772715888599}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1644737947}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4140bc5968c38684ca4a53622c83f984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1644737947 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8914446771122560112, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
+  m_PrefabInstance: {fileID: 8914446772715888599}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1644737949 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3093656236933292762, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
+  m_PrefabInstance: {fileID: 8914446772715888599}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644737947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eead47b4f7bde1e44b93a1e0759a6300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1644737950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644737947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7eed95b71e2479419688f9b73be1883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 892885926}
+    - {fileID: 5861617361128209678}
+    - {fileID: 1894637149}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _magazineView
+      Entry: 10
+      Data: 0
+    - Name: _bulletFactory
+      Entry: 10
+      Data: 1
+    - Name: _gunView
+      Entry: 10
+      Data: 2
+  _magazineCapacity: 1
 --- !u!114 &1647263824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3378,26 +3422,15 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 1989685476}
-    - {fileID: 1034795417}
-    - {fileID: 1647263827}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: _magazineView
-      Entry: 10
-      Data: 0
-    - Name: _gunView
-      Entry: 10
-      Data: 1
-    - Name: _bulletFactory
-      Entry: 10
-      Data: 2
-  _magazineCapacity: 3
-  _shootDelay: 0.4
+    - Name: _gunFactory
+      Entry: 6
+      Data: 
   _reloadDelay: 3
 --- !u!114 &1647263826
 MonoBehaviour:
@@ -3451,16 +3484,12 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 1647263824}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: _gunFactory
-      Entry: 10
-      Data: 0
+    SerializationNodes: []
   _shootPoint: {fileID: 1977357989}
   _shootButton: {fileID: 1742534106}
 --- !u!114 &1647263830
@@ -3907,7 +3936,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f35744b9983fb4da2096d6845af4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _label: {fileID: 1989685474}
 --- !u!114 &1989685474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4500,7 +4528,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3093656236933292764, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
   m_PrefabInstance: {fileID: 8914446772715888599}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1644737947}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7076059017c400b48b000382d797646b, type: 3}
@@ -4511,7 +4539,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3093656236933292761, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
   m_PrefabInstance: {fileID: 8914446772715888599}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1644737947}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 933c07c68aedd96448d5854dde2aa6ca, type: 3}
@@ -4538,36 +4566,20 @@ PrefabInstance:
       objectReference: {fileID: 3093656236933292762, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
     - target: {fileID: 3093656236933292762, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3093656236933292762, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[0]
-      value: '"path":"_bulletFactory","value":$eref:0'
-      objectReference: {fileID: 0}
-    - target: {fileID: 3093656236933292762, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[1]
-      value: '"path":"_gunView","value":$eref:1'
-      objectReference: {fileID: 0}
-    - target: {fileID: 3093656236933292762, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[2]
-      value: '"path":"_magazineView","value":$eref:2'
+      value: '"path":"_gunFactory","value":$eref:0'
       objectReference: {fileID: 0}
     - target: {fileID: 3093656236933292762, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3093656236933292762, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 5861617361128209678}
-    - target: {fileID: 3093656236933292762, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
-      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[1]
-      value: 
-      objectReference: {fileID: 1894637149}
-    - target: {fileID: 3093656236933292762, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
-      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[2]
-      value: 
-      objectReference: {fileID: 892885926}
+      objectReference: {fileID: 1644737950}
     - target: {fileID: 3093656236933292766, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
       propertyPath: _shootButton
       value: 
@@ -4576,6 +4588,22 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 3093656236933292766, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
+    - target: {fileID: 3093656236933292766, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093656236933292766, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[0]
+      value: '"path":"_gunFactory","value":$eref:0'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093656236933292766, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093656236933292766, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 1644737949}
     - target: {fileID: 8616808033976465349, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.01
@@ -4731,7 +4759,7 @@ PrefabInstance:
     - target: {fileID: 8914446771122560099, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
       propertyPath: serializationData.Prefab
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8914446771122560099, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
     - target: {fileID: 8914446771122560099, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
       value: 1
@@ -4776,6 +4804,22 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 8914446771122560101, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
+    - target: {fileID: 8914446771122560101, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914446771122560101, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[0]
+      value: '"path":"_gunFactory","value":$eref:0'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914446771122560101, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914446771122560101, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 1644737949}
     - target: {fileID: 8914446771122560112, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
       propertyPath: m_Name
       value: 1Player
@@ -4814,7 +4858,7 @@ PrefabInstance:
       objectReference: {fileID: 8914446771122560122, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
     - target: {fileID: 8914446771122560122, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8914446771122560122, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[0]
@@ -4822,23 +4866,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8914446771122560122, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[1]
-      value: '"path":"_healthFactory","value":$eref:1'
+      value: '"path":"_gunFactory","value":$eref:1'
       objectReference: {fileID: 0}
     - target: {fileID: 8914446771122560122, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[2]
-      value: '"path":"_input","value":$eref:2'
+      value: '"path":"_healthFactory","value":$eref:2'
       objectReference: {fileID: 0}
     - target: {fileID: 8914446771122560122, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[3]
-      value: '"path":"_rotationFactory","value":$eref:3'
+      value: '"path":"_input","value":$eref:3'
       objectReference: {fileID: 0}
     - target: {fileID: 8914446771122560122, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[4]
-      value: '"path":"_shootButtonFactory","value":$eref:4'
+      value: '"path":"_rotationFactory","value":$eref:4'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914446771122560122, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[5]
+      value: '"path":"_shootButtonFactory","value":$eref:5'
       objectReference: {fileID: 0}
     - target: {fileID: 8914446771122560122, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8914446771122560122, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[0]
@@ -4847,17 +4895,21 @@ PrefabInstance:
     - target: {fileID: 8914446771122560122, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 1631110063}
+      objectReference: {fileID: 1644737949}
     - target: {fileID: 8914446771122560122, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 173963175}
+      objectReference: {fileID: 1631110063}
     - target: {fileID: 8914446771122560122, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[3]
       value: 
-      objectReference: {fileID: 1631110067}
+      objectReference: {fileID: 173963175}
     - target: {fileID: 8914446771122560122, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[4]
+      value: 
+      objectReference: {fileID: 1631110067}
+    - target: {fileID: 8914446771122560122, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[5]
       value: 
       objectReference: {fileID: 1631110066}
     - target: {fileID: 8914446771122560124, guid: 7c220fc1e9cc95c4bb35c71cab6438a9, type: 3}

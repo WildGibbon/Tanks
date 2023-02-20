@@ -23,9 +23,6 @@ namespace Tanks.UI.Buttons
 		{
 			var shootDirection = _shootingPoint.right;
 
-			Debug.Log(shootDirection);
-			Debug.Log(_shootingPoint.right);
-
 			if (_gun.CanShoot)
 				_gun.Shoot(shootDirection);
 		}

@@ -27,12 +27,9 @@ namespace Tanks.Model.Gun
 			if (!CanShoot)
 				throw new InvalidOperationException();
 
-			if (_magazine.CanTakeBullet())
-			{
-				_magazine.TakeBullet();
-				_bulletFactory.Create().Throw(direction);
-				_view.Visualize();
-			}
+		    _magazine.TakeBullet();
+			_bulletFactory.Create().Throw(direction);
+			_view.Visualize();
 		}
 
 		public void Reload()

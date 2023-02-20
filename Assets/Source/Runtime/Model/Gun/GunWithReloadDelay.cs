@@ -30,20 +30,15 @@ namespace Tanks.Model.Gun
 			_gun.Shoot(direction);
 		}
 
-		public void Reload()
+		public async void Reload()
 		{
 			if (!_isReloading)
-			{
-				Delay();
+			{   
+				_isReloading = true;
+				await UniTask.Delay(TimeSpan.FromSeconds(_reloadDelay));
 				_gun.Reload();
+				_isReloading = false;
 			}
    		}
-		
-		private async void Delay()
-		{
-			_isReloading = true;
-			await UniTask.Delay(TimeSpan.FromSeconds(_reloadDelay));
-			_isReloading = false;
-		}
 	}
 }

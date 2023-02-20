@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,8 +11,8 @@ namespace Tanks.Model.Gun.Magazine
 {
 	public class BulletMagazine : IBulletMagazine
 	{
-		private readonly int _capacity;
 		private readonly IBulletMagazineView _view;
+		private readonly int _capacity;
 
 		private int _currentBulletsCount;
 

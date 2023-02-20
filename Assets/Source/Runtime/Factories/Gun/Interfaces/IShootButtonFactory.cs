@@ -3,8 +3,8 @@ using Tanks.UI;
 
 namespace Tanks.Factories
 {
-	public interface IButtonFactory
+	public interface IShootButtonFactory
 	{
-		IButton Create();
+		IButton Create(IGun gun);
 	}
 }
