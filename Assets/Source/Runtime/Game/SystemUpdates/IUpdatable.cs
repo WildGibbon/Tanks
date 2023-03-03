@@ -1,4 +1,4 @@
-﻿namespace Tanks.Tools.SystemUpdates
+﻿namespace Tanks.Game.SystemUpdates
 {
 	public interface IUpdatable
 	{

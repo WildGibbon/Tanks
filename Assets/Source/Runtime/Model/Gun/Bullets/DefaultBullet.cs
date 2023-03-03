@@ -1,29 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Tanks.Model.Gun;
-using Tanks.Model.Health;
-using Tanks.View.Gun;
+﻿using Tanks.View.Gun;
 using UnityEngine;
+using System;
 
 namespace Tanks.Model.Gun
 {
 	public class DefaultBullet : IBullet
 	{
 		private readonly IBulletView _view;
-		private readonly int _damage;
 		private readonly float _throwForce;
 
-		public DefaultBullet(IBulletView view, float throwForce, int damage)
+		public DefaultBullet(IBulletView view, float throwForce)
 		{
-			if(damage <= 0)
-				throw new ArgumentOutOfRangeException(nameof(damage));
 			if(throwForce <= 0)
 				throw new ArgumentOutOfRangeException(nameof(throwForce));
 
-			_damage = damage;
 			_throwForce = throwForce;
 			_view = view ?? throw new ArgumentNullException(nameof(view));
 		}
@@ -32,11 +22,6 @@ namespace Tanks.Model.Gun
 		{
 			var rotation = Quaternion.LookRotation(Vector3.forward, direction);
 			_view.Visualize(direction * _throwForce, rotation);
-		}
-
-		public void Attack(IHealth health)
-		{
-			health.TakeDamage(_damage);
 		}
 	}
 }

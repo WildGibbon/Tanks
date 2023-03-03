@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Tanks.Tools.SystemUpdates
+namespace Tanks.Game.SystemUpdates
 {
 	public class SystemUpdate : ISystemUpdate
 	{

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Tanks.Factories;
 using Tanks.Game;
-using Tanks.Tools.SystemUpdates;
+using Tanks.Game.SystemUpdates;
 using UnityEngine;
 
 namespace Tanks.EntryPoint

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Tanks.Factories;
 using Tanks.Model.Player;
-using Tanks.Tools.SystemUpdates;
+using Tanks.Game.SystemUpdates;
 
 namespace Tanks.Game
 {

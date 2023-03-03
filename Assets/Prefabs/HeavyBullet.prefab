@@ -92,9 +92,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5861617361128209676}
   - component: {fileID: 5861617361128209678}
-  - component: {fileID: 2237848466589596726}
   - component: {fileID: -8606452525584427945}
   - component: {fileID: 6287204731413745837}
+  - component: {fileID: 2516416019676542686}
   m_Layer: 3
   m_Name: HeavyBullet
   m_TagString: Untagged
@@ -144,18 +144,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.068234265, y: 0.21097167}
   m_EdgeRadius: 0
---- !u!114 &2237848466589596726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5861617361128209664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: def5884dc334b4f4d8cf4a006dbbf4f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &-8606452525584427945
 Rigidbody2D:
   serializedVersion: 4
@@ -190,6 +178,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: -8606452525584427945}
+--- !u!114 &2516416019676542686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5861617361128209664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15393b83a767a8643a2ef927fcd8d990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6531770891667789725
 GameObject:
   m_ObjectHideFlags: 0

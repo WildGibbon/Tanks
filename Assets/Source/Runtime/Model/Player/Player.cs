@@ -2,7 +2,7 @@
 using Tanks.Model.Gun;
 using Tanks.Model.Input;
 using Tanks.Model.Movement;
-using Tanks.Tools.SystemUpdates;
+using Tanks.Game.SystemUpdates;
 using UnityEngine;
 
 namespace Tanks.Model.Player
